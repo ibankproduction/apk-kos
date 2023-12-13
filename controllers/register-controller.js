@@ -1,6 +1,6 @@
 const Cryptr = require('cryptr');
 const express=require("express");
-const connection = require('../config');
+const connection = require('../database/config');
 // cryptr = new Cryptr('myTotalySecretKey');
  
 module.exports.register=function(req,res){

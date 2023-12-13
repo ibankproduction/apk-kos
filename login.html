@@ -24,7 +24,7 @@
 <body id="page-top">
 
     <!-- Page Wrapper -->
-    <div id="wrapper">
+    <div id="wrapper" action="/login" method="GET">
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -42,7 +42,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="home.php">
+                <a class="nav-link" href="/login">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -51,29 +51,30 @@
             <hr class="sidebar-divider">
 
 
-             <!-- Nav Item - Charts -->
+             <!-- Nav Item - Sewa Kamar -->
              <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="/sewakamar.html">
                     <i class="fa fa-tags"></i>
                     <span>Sewa Kamar</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Data Kamar -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="/datakamar.html">
                     <i class="fa fa-database"></i>
                     <span>Data Kamar</span></a>
             </li>
 
+              <!-- Nav Item - Data Tagihan -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="/datatagihan.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Data Tagihan</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Hiatory Pembayaran -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#">
                     <i class="fa fa-history"></i>
                     <span>History Pembayaran</span></a>
             </li>
@@ -178,7 +179,7 @@
                                 </form>
                             </div>
                         </li>
-
+                        
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -309,7 +310,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="edit.php">
+                                <a class="dropdown-item" href="/edit">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -322,7 +323,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="/login" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -457,7 +458,7 @@
                                     
 
                             <!-- Approach -->
-                            <div class="card shadow mb-4">
+                            <form class="card shadow mb-4" action="/login" method="GET">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Last Sign Up</h6>
                                 </div>
@@ -465,19 +466,18 @@
                                 <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
-                                        <tr>
-                                            <th>No</th>
-                                            <th>ID</th>
-                                            <th>Username</th>
-                                            <th>Email</th>
-                                            <th>Password</th>
-                                            <th colspan="2">Aksi</th>
-                                        </tr>
-                                </div>
-                                </div>
-                            
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Username</th>
+                                                <th>Email</th>
+                                                <th>Password</th>
+                                                <th colspan="2">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                </div>                                                  
                             </div>
-                        </div>
+                        </form>
                     </div>
 
                 </div>
@@ -486,22 +486,12 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
         </div>
         <!-- End of Content Wrapper -->
-
     </div>
     <!-- End of Page Wrapper -->
 
+    
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
@@ -515,13 +505,13 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <a class="btn btn-primary" href="/">Logout</a>
                 </div>
             </div>
         </div>
@@ -543,7 +533,6 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-
 
  
 
